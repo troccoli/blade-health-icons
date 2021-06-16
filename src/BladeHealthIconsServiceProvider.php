@@ -3,7 +3,6 @@
 namespace Troccoli\BladeHealthIcons;
 
 use BladeUI\Icons\Factory;
-use Illuminate\Contracts\Container\Container;
 use Illuminate\Support\ServiceProvider;
 
 class BladeHealthIconsServiceProvider extends ServiceProvider
@@ -12,10 +11,11 @@ class BladeHealthIconsServiceProvider extends ServiceProvider
     {
         $this->registerConfig();
 
-        $this->callAfterResolving(Factory::class, function (Factory $factory, Container $container) {
-            $config = $container->make('config')->get('blade-health-icons', []);
-
-            $factory->add('health-icons', array_merge(['path' => __DIR__ . '/../resources/svg'], $config));
+        $this->callAfterResolving(Factory::class, function (Factory $factory) {
+            $factory->add('health-icons', [
+                'path' => __DIR__.'/../resources/svg',
+                'prefix' => config('blade-health-icons.prefix'),
+            ]);
         });
     }
 

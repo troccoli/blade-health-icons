@@ -49,25 +49,25 @@ php artisan vendor:publish --tag=blade-health-icons-config
 Icons can be used as self-closing Blade components which will be compiled to SVG icons:
 
 ```blade
-<x-health-icon-o-blood-a-n/>
+<x-healthicons-o-blood-a-n/>
 ```
 
 You can also pass classes to your icon components:
 
 ```blade
-<x-health-icon-o-blood-a-n class="w-6 h-6 text-gray-500"/>
+<x-healthicons-o-blood-a-n class="w-6 h-6 text-gray-500"/>
 ```
 
 And even use inline styles:
 
 ```blade
-<x-health-icon-o-blood-a-n style="color: #555"/>
+<x-healthicons-o-blood-a-n style="color: #555"/>
 ```
 
 The solid icons can be referenced like this:
 
 ```blade
-<x-health-icon-s-blood-a-n/>
+<x-healthicons-s-blood-a-n/>
 ```
 
 ### Raw SVG Icons
