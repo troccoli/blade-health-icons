@@ -1,0 +1,7 @@
+dist/
+composer.lock
+phpunit.xml
+vendor
+.phpunit.result.cache
+.idea
+.original-repo

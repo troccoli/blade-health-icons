@@ -1,0 +1,43 @@
+{
+    "name": "troccoli/blade-health-icons",
+    "description": "A package to easily make use of Health Icons in your Laravel Blade views.",
+    "keywords": ["Blade", "Healthicons", "Laravel"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Giulio Troccoli-Allard",
+            "email": "giulio@troccoli.it"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "blade-ui-kit/blade-icons": "^1.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0",
+        "orchestra/testbench": "^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Troccoli\\BladeHealthIcons\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Troccoli\\BladeHealthIcons\\BladeHealthIconsServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
