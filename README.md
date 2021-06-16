@@ -76,7 +76,7 @@ And even use inline styles:
 The filled icons can be referenced like this:
 
 ```blade
-<x-healthicons-s-blood-a-n/>
+<x-healthicons-f-blood-a-n/>
 ```
 
 ### Raw SVG Icons
