@@ -1,5 +1,5 @@
 <p>
-    <img src="./socialcard-blade-health-icons.png" alt="Social Card Blade Healt Icons"/>
+    <img src="./socialcard-blade-health-icons.png" alt="Social Card Blade Health Icons"/>
 </p>
 
 # Blade Health Icons
@@ -46,6 +46,15 @@ php artisan vendor:publish --tag=blade-health-icons-config
 
 ## Usage
 
+Health Icons provides two types of icons: filled and outlined.
+
+Once you have found the icon you want to use on their site, click on it and have a look at the icon's tags:
+
+<img src="./blood-a-n-tags.png" alt="Blood A- Icon Tags"/>
+
+The name of the icon to use will be the `dhis2` tag, where you replace the underscore with dashes.
+For example, the Blood A- icon's dhis2 tag is `blood_a_n`, so the name for the icon will be `blood-a-n`.
+
 Icons can be used as self-closing Blade components which will be compiled to SVG icons:
 
 ```blade
@@ -64,7 +73,7 @@ And even use inline styles:
 <x-healthicons-o-blood-a-n style="color: #555"/>
 ```
 
-The solid icons can be referenced like this:
+The filled icons can be referenced like this:
 
 ```blade
 <x-healthicons-s-blood-a-n/>
@@ -83,6 +92,10 @@ Then use them in your views like:
 ```blade
 <img src="{{ asset('vendor/blade-health-icons/o-blood-a-n.svg') }}" width="10" height="10"/>
 ```
+
+### How to find the name of the icon
+
+
 
 ## Changelog
 
