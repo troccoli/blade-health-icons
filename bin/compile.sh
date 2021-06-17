@@ -2,7 +2,7 @@
 
 set -e
 
-DIRECTORY=$(cd `dirname $0` && pwd)
+DIRECTORY=$(cd $(dirname $0) && pwd)
 TEMP=$DIRECTORY/../.original-repo
 REPO=$TEMP/healthicons
 DIST=$REPO/public/icons/svg

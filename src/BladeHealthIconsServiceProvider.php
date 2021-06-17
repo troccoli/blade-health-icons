@@ -7,7 +7,7 @@ use Illuminate\Support\ServiceProvider;
 
 class BladeHealthIconsServiceProvider extends ServiceProvider
 {
-    public function register() : void
+    public function register(): void
     {
         $this->registerConfig();
 
@@ -19,21 +19,21 @@ class BladeHealthIconsServiceProvider extends ServiceProvider
         });
     }
 
-    private function registerConfig() : void
-    {
-        $this->mergeConfigFrom(__DIR__ . '/../config/blade-health-icons.php', 'blade-health-icons');
-    }
-
-    public function boot() : void
+    public function boot(): void
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__ . '/../resources/svg' => public_path('vendor/blade-health-icons'),
+                __DIR__.'/../resources/svg' => public_path('vendor/blade-health-icons'),
             ], 'blade-health-icons');
 
             $this->publishes([
-                __DIR__ . '/../config/blade-health-icons.php' => $this->app->configPath('blade-health-icons.php'),
+                __DIR__.'/../config/blade-health-icons.php' => $this->app->configPath('blade-health-icons.php'),
             ], 'blade-health-icons-config');
         }
+    }
+
+    private function registerConfig(): void
+    {
+        $this->mergeConfigFrom(__DIR__.'/../config/blade-health-icons.php', 'blade-health-icons');
     }
 }
