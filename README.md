@@ -4,18 +4,10 @@
 
 # Blade Health Icons
 
-<a href="https://github.com/troccoli/blade-health-icons/actions?query=workflow%3ATests">
-    <img src="https://github.com/blade-ui-kit/blade-health-icons/workflows/Tests/badge.svg" alt="Tests">
-</a>
-<a href="https://github.styleci.io/repos/258753939">
-    <img src="https://github.styleci.io/repos/258753939/shield?style=flat" alt="Code Style">
-</a>
-<a href="https://packagist.org/packages/troccoli/blade-health-icons">
-    <img src="https://img.shields.io/packagist/v/blade-ui-kit/blade-health-icons" alt="Latest Stable Version">
-</a>
-<a href="https://packagist.org/packages/troccoli/blade-health-icons">
-    <img src="https://img.shields.io/packagist/dt/troccoli/blade-health-icons" alt="Total Downloads">
-</a>
+[![Tests](https://github.com/troccoli/blade-health-icons/actions/workflows/test.yml/badge.svg)](https://github.com/troccoli/blade-health-icons/actions/workflows/test.yml)
+![StyleCI](https://github.styleci.io/repos/377539924/shield?style="flat")
+![Packagist Version](https://img.shields.io/packagist/v/troccoli/blade-health-icons)
+![Packagist Downloads](https://img.shields.io/packagist/dt/troccoli/blade-health-icons)
 
 A package to easily make use of [Health Icons](https://github.com/resolvetosavelives/healthicons) in your Laravel Blade views.
 
