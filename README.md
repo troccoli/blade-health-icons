@@ -5,7 +5,7 @@
 # Blade Health Icons
 
 [![Tests](https://github.com/troccoli/blade-health-icons/actions/workflows/test.yml/badge.svg)](https://github.com/troccoli/blade-health-icons/actions/workflows/test.yml)
-![StyleCI](https://github.styleci.io/repos/377539924/shield?style="flat")
+![StyleCI](https://github.styleci.io/repos/377539924/shield?style=flat)
 ![Packagist Version](https://img.shields.io/packagist/v/troccoli/blade-health-icons)
 ![Packagist Downloads](https://img.shields.io/packagist/dt/troccoli/blade-health-icons)
 
