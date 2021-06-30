@@ -40,12 +40,9 @@ php artisan vendor:publish --tag=blade-health-icons-config
 
 Health Icons provides two types of icons: filled and outlined.
 
-Once you have found the icon you want to use on their site, click on it and have a look at the icon's tags:
-
-<img src="./blood-a-n-tags.png" alt="Blood A- Icon Tags"/>
-
-The name of the icon to use will be the `dhis2` tag, where you replace the underscore with dashes.
-For example, the Blood A- icon's dhis2 tag is `blood_a_n`, so the name for the icon will be `blood-a-n`.
+Once you have found the icon you want to use on their [site](https://healthicons.org/), click on it and make a note of
+the filename. The name of the icon to use will be the filename, where you replace the underscore with dashes.
+For example, the Blood A- icon's filename is `blood_a_n`, so the name for the icon will be `blood-a-n`.
 
 Icons can be used as self-closing Blade components which will be compiled to SVG icons:
 
