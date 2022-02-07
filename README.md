@@ -82,10 +82,6 @@ Then use them in your views like:
 <img src="{{ asset('vendor/blade-health-icons/o-blood-a-n.svg') }}" width="10" height="10"/>
 ```
 
-### How to find the name of the icon
-
-
-
 ## Changelog
 
 Check out the [CHANGELOG](CHANGELOG.md) in this repository for all the recent changes.
