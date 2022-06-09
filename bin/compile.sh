@@ -49,4 +49,7 @@ done
 echo "Cleaning up"
 rm -rf $TEMP
 
+echo "Adding icons to GIT"
+git add $RESOURCES
+
 echo "All done!"
