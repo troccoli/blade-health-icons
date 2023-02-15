@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
-set -e
+# Run this from the project directory
+# e.g. ./bin/compile.sh
+
+set -eu
 
 DIRECTORY=$(cd $(dirname $0) && pwd)
 TEMP=$DIRECTORY/../.original-repo
