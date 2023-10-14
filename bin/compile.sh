@@ -41,14 +41,6 @@ for FILE in $DIST/filled/*/*; do
   cp $FILE $RESOURCES/f-$(echo $SANITIZEDFILE)
 done
 
-echo "Fixing the SVG files..."
-for FILE in $RESOURCES/*; do
-  # Fix the svg to allow changing their colour
-  sed -i '' 's/fill="none"/fill="currentColor"/g' $FILE
-  sed -i '' 's/fill="white"/fill="none"/g' $FILE
-  sed -i '' 's/fill="#333333"//g' $FILE
-done
-
 echo "Cleaning up"
 rm -rf $TEMP
 
