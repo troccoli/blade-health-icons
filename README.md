@@ -24,6 +24,22 @@ For a full list of available icons see [the SVG directory](resources/svg) or pre
 composer require troccoli/blade-health-icons
 ```
 
+The people at [Healthicons.org](https://healthicons.org/) have now moved to published the icon as an NPM package
+following SemVer. This means that I can now tie the releases of this package to that one.
+
+Versions of Blade Health Icon prior to 3.0.0 were based on a date, i.e. from time to time, or when I knew new
+icons were available, I would update this package and make a new release.
+
+From now on however, I will follow Healthicons.org versioning, albeit with a slight difference because I had already
+started using SemVer.
+
+For this reason, if you want a particular version of the Healthicons.org package then you need to look at
+the following table and use the correct version for this package.
+
+| Blade Health Icons | Healthicons.org |
+|-------------------|----------------|
+| 3.0.0 | 1.0.0 |
+
 ## Blade Icons
 
 Blade Healthicons uses Blade Icons under the hood. Please refer to [the Blade Icons readme](https://github.com/blade-ui-kit/blade-icons) for additional functionality. We also recommend to [enable icon caching](https://github.com/blade-ui-kit/blade-icons#caching) with this library.
