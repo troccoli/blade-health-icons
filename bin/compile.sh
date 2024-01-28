@@ -1,27 +1,36 @@
 #!/usr/bin/env bash
 
-# Run this from the project directory
-# e.g. ./bin/compile.sh
+# Run this from the project directory making sure to include the
+# version of the Healthicons.org NPM package you want
+# e.g. ./bin/compile.sh 1.0.0
 
-set -eu
+set -eux
+
+if [ -z $1 ]; then
+  echo "Version is missing."
+  echo "Usage:"
+  echo "  $0 1.0.0"
+  exit 1
+fi
 
 DIRECTORY=$(cd $(dirname $0) && pwd)
-TEMP=$DIRECTORY/../.original-repo
-REPO=$TEMP/healthicons
-DIST=$REPO/public/icons/svg
+VERSION=$1
+TEMP=$DIRECTORY/../.healthicons
+DIST=$TEMP/node_modules/healthicons/public/icons/svg
 RESOURCES=$DIRECTORY/../resources/svg
 
-echo "Removing temporary directory"
+echo "Create temporary directory"
 if [ -d $TEMP ]; then
   rm -rf $TEMP
-  mkdir $TEMP
 fi
+mkdir $TEMP
 
 echo "Removing existing icons"
 rm $RESOURCES/*
 
-echo "Cloning resolvetosavelives/healthicons repo"
-git clone -q https://github.com/resolvetosavelives/healthicons $REPO
+echo "Install healthicons package"
+cd $TEMP
+npm i healthicons@$VERSION
 
 echo "Compiling outline icons..."
 for FILE in $DIST/outline/*/*; do
@@ -39,6 +48,15 @@ for FILE in $DIST/filled/*/*; do
   # Replace _ with -
   SANITIZEDFILE=${SANITIZEDFILE//_/-}
   cp $FILE $RESOURCES/f-$(echo $SANITIZEDFILE)
+done
+
+echo "Compiling negative icons..."
+for FILE in $DIST/negative/*/*; do
+  # Remove path
+  SANITIZEDFILE=${FILE##*/}
+  # Replace _ with -
+  SANITIZEDFILE=${SANITIZEDFILE//_/-}
+  cp $FILE $RESOURCES/n-$(echo $SANITIZEDFILE)
 done
 
 echo "Cleaning up"
