@@ -37,8 +37,9 @@ For this reason, if you want a particular version of the Healthicons.org package
 the following table and use the correct version for this package.
 
 | Blade Health Icons | Healthicons.org |
-|-------------------|----------------|
-| 3.0.0 | 1.0.0 |
+|--------------------|-----------------|
+| 3.0.0              | 1.0.0           |
+| 3.0.1              | 1.0.1           |
 
 ## Blade Icons
 
