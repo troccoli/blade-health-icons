@@ -36,10 +36,11 @@ started using SemVer.
 For this reason, if you want a particular version of the Healthicons.org package then you need to look at
 the following table and use the correct version for this package.
 
-| Blade Health Icons | Healthicons.org |
-|--------------------|-----------------|
-| 3.0.0              | 1.0.0           |
-| 3.0.1              | 1.0.1           |
+| Blade Health Icons | Healthicons.org | Laravel  |
+|--------------------|-----------------|----------|
+| 3.0.0              | 1.0.0           |          |
+| 3.0.1              | 1.0.1           | ^9, ^10  |
+| 3.0.2              | 1.0.1           | ^10, ^11 |
 
 ## Blade Icons
 
