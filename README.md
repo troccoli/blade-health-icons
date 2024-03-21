@@ -38,7 +38,7 @@ the following table and use the correct version for this package.
 
 | Blade Health Icons | Healthicons.org | Laravel  |
 |--------------------|-----------------|----------|
-| 3.0.0              | 1.0.0           |          |
+| 3.0.0              | 1.0.0           | ^9, ^10  |
 | 3.0.1              | 1.0.1           | ^9, ^10  |
 | 3.0.2              | 1.0.1           | ^10, ^11 |
 
