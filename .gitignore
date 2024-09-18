@@ -4,6 +4,6 @@ phpunit.xml
 vendor
 .phpunit.result.cache
 .idea
-.heatlhicons
+.healthicons
 docker-compose.yml
 .docker
