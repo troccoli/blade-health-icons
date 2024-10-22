@@ -50,15 +50,6 @@ for FILE in $DIST/filled/*/*; do
   cp $FILE $RESOURCES/f-$(echo $SANITIZEDFILE)
 done
 
-echo "Compiling negative icons..."
-for FILE in $DIST/negative/*/*; do
-  # Remove path
-  SANITIZEDFILE=${FILE##*/}
-  # Replace _ with -
-  SANITIZEDFILE=${SANITIZEDFILE//_/-}
-  cp $FILE $RESOURCES/n-$(echo $SANITIZEDFILE)
-done
-
 echo "Cleaning up"
 rm -rf $TEMP
 
