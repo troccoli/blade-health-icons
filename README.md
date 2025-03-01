@@ -30,11 +30,9 @@ following SemVer. This means that I can now tie the releases of this package to 
 Versions of Blade Health Icon prior to 3.0.0 were based on a date, i.e. from time to time, or when I knew new
 icons were available, I would update this package and make a new release.
 
-From now on however, I will follow Healthicons.org versioning, albeit with a slight difference because I had already
-started using SemVer.
+Today, versions of this package will follow SemVer and the Healthicons.org's own package's versioning.
 
-For this reason, if you want a particular version of the Healthicons.org package then you need to look at
-the following table and use the correct version for this package.
+Please use the table below to choose the correct version to install
 
 | Blade Health Icons | Healthicons.org | Laravel  |
 |--------------------|-----------------|----------|
@@ -43,6 +41,7 @@ the following table and use the correct version for this package.
 | 3.0.2              | 1.0.1           | ^10, ^11 |
 | 3.0.3              | 1.0.3           | ^10, ^11 |
 | 4.0.0              | 2.0.0           | ^10, ^11 |
+| 5.0.0              | 2.0.0           | ^11, ^12 |
 
 ## Blade Icons
 
