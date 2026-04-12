@@ -6,11 +6,12 @@ namespace Tests;
 
 use BladeUI\Icons\BladeIconsServiceProvider;
 use Orchestra\Testbench\TestCase;
+use PHPUnit\Framework\Attributes\Test;
 use Troccoli\BladeHealthIcons\BladeHealthIconsServiceProvider;
 
 class CompilesIconsTest extends TestCase
 {
-    /** @test */
+    #[Test]
     public function it_can_add_classes_to_icons(): void
     {
         $result = svg('healthicons-f-blood-a-n', 'w-6 h-6 text-gray-500')->toHtml();
@@ -25,7 +26,7 @@ class CompilesIconsTest extends TestCase
         $this->assertSame($expected, $result);
     }
 
-    /** @test */
+    #[Test]
     public function it_can_add_styles_to_icons(): void
     {
         $result = svg('healthicons-f-blood-a-n', ['style' => 'fill: #F00'])->toHtml();
@@ -41,7 +42,7 @@ class CompilesIconsTest extends TestCase
         $this->assertSame($expected, $result);
     }
 
-    /** @test */
+    #[Test]
     public function it_compiles_a_single_anonymous_component(): void
     {
         $result = svg('healthicons-f-blood-a-n')->toHtml();
