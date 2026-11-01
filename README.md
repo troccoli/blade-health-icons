@@ -44,6 +44,7 @@ Please use the table below to choose the correct version to install
 | 5.0.0              | 2.0.0           | ^11, ^12 |
 | 6.0.0              | 2.0.0           | ^12, ^13 |
 | 7.0.0              | 3.0.0           | ^12, ^13 |
+| 7.1.0              | 3.1.0           | ^12, ^13 |
 
 ## Blade Icons
 
