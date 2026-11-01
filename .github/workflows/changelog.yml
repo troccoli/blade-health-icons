@@ -15,19 +15,11 @@ jobs:
       contents: write
 
     steps:
-      - name: Create GitHub App token
-        id: app-token
-        uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3.3.0
-        with:
-          client-id: ${{ secrets.CHANGELOG_CLIENT_ID }}
-          private-key: ${{ secrets.CHANGELOG_APP_PRIVATE_KEY }}
-
       - name: Checkout repository
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: main
           fetch-depth: 0 # Fetch all history and tags
-          token: ${{ steps.app-token.outputs.token }}
           persist-credentials: false
 
       - name: Generate Changelog
@@ -38,15 +30,25 @@ jobs:
         env:
           OUTPUT: CHANGELOG.md
 
+      - name: Import GPG signing key
+        uses: crazy-max/ghaction-import-gpg@2dc316deee8e90f13e1a351ab510b4d5bc0c82cd # v7.0.0
+        with:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          passphrase: ${{ secrets.GPG_PASSPHRASE }}
+          git_user_signingkey: true
+          git_commit_gpgsign: true
+          git_committer_name: Giulio Troccoli-Allard
+          git_committer_email: giulio@troccoli.it
+
       - name: Commit CHANGELOG.md
         env:
-          APP_TOKEN: ${{ steps.app-token.outputs.token }}
+          CHANGELOG_PAT: ${{ secrets.CHANGELOG_PAT }}
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "Giulio Troccoli-Allard"
+          git config user.email "giulio@troccoli.it"
           
           git add CHANGELOG.md
-          git commit -m "chore(changelog): update CHANGELOG.md for ${{ inputs.version }}" || exit 0
+          git commit -S -m "chore(changelog): update CHANGELOG.md for ${{ inputs.version }}" || exit 0
           
-          git remote set-url origin "https://x-access-token:${APP_TOKEN}@github.com/${{ github.repository }}.git"
+          git remote set-url origin "https://x-access-token:${CHANGELOG_PAT}@github.com/${{ github.repository }}.git"
           git push origin HEAD:main
